@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(10px + 1vw);
+    padding: calc(20px + 2vw) calc(30px + 3vw);
+    background: linear-gradient(to right , rgb(184, 113, 251) , rgb(139, 17, 253) , rgb(184, 113, 251));
+    margin-bottom: calc(30px + 3vw);
+    border-radius: 0px 0px 30px 30px;
+    overflow: hidden;
+}
+header > div{
+    text-align: center;
+    width: 60%;
+}
+header > div > h1{
+    font-size: calc(20px + 2vw);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(20px + 2vw);
+    padding: calc(50px + 5vw);
+}
+.card{
+    width: 300px;
+    min-width: 150px;
+    flex-shrink: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+.card h1{
+    background-color: blueviolet;
+    font-size: calc(14px + 0.1vw);
+    text-align: start;
+    padding: calc(10px + 0.4vw) calc(8px + 0.4vw);
+}
+.card .content , .card .content p{
+    padding: calc(15px + 0.5vw);
+}
+.card .content p{
+    background-color: #000333;
+    border-radius: 10px;
+    margin-bottom: calc(10px + 0.5vw);
+}
+.card .btn{
+    background-color: blueviolet;
+    padding: calc(2px + 0.2vw) calc(8px + 0.4vw);
+    border: none;
+    border-radius: 5px;
+}
+footer{
+    text-align: center;
+    background-color: blueviolet;
+    padding: 10px;
+}

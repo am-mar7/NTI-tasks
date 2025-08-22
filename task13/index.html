@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="gallery-header">
+    <h2 class="fw-bold">Interactive Card Gallery</h2>
+    <p class="mb-0">Click buttons to experience different effects on each card</p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Nature">
+          <div class="card-body" id="chnagedbody">
+            <h5 class="card-title" id="chnagedtitle">Nature Explorer</h5>
+            <p class="card-text">Discover the beauty of natural landscapes around the world.</p>
+            <div class="d-flex gap-2">
+              <button id="changecolor" class="btn btn-primary btn-sm">Change Color & Shadow</button>
+              <button id="chnagetitlecolor" class="btn btn-outline-primary btn-sm">Change Title Color</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="rotatecard" class="card h-100">
+          <img id="imgcontainer" src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Urban">
+          <div class="card-body">
+            <h5 class="card-title">Urban Adventure</h5>
+            <p class="card-text">Explore vibrant cityscapes and urban architecture.</p>
+            <div class="d-flex gap-2">
+              <button id="rotatebtn" class="btn btn-success btn-sm">Border & Rotate</button>
+              <button id="imageeffectbtn" class="btn btn-outline-success btn-sm">Image Effect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img id="effectimg" src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Tech">
+          <div class="card-body">
+            <h5 id="effecttitle" class="card-title">Tech Innovations</h5>
+            <p id="effecttext" class="card-text">Stay updated with the latest technological advancements.</p>
+            <div class="d-flex gap-2">
+              <button id="imageandtexteffect" class="btn btn-info btn-sm">Image & Text Effect</button>
+              <button id="changetext" class="btn btn-outline-info btn-sm">Change Text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="fadecard" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Nature">
+          <div class="card-body">
+            <h5 class="card-title">Nature Explorer</h5>
+            <p id="cardcontent" class="card-text">Discover the beauty of natural landscapes around the world.</p>
+            <div class="d-flex gap-2">
+              <button id="fadeeffect" class="btn btn-primary btn-sm">Fade effect</button>
+              <button id="togglecontent" class="btn btn-outline-primary btn-sm">Toggle text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pluscard" class="col-md-4">
+        <div id="zoomrotatecard" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Urban">
+          <div class="card-body">
+            <h5 class="card-title">Urban Adventure</h5>
+            <p class="card-text">Explore vibrant cityscapes and urban architecture.</p>
+            <div class="d-flex gap-2">
+              <button id="zoomrotatebtn" class="btn btn-success btn-sm">Zoom and rotate</button>
+              <button id="plusbtn" class="btn btn-outline-success btn-sm">PLuse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="sixth_card" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Tech">
+          <div id="changedbg" class="card-body">
+            <h5 class="card-title">Tech Innovations</h5>
+            <p class="card-text">Stay updated with the latest technological advancements.</p>
+            <div class="d-flex gap-2">
+                
+              <button id="elevatebtn" class="btn btn-info btn-sm">Evlate and glow</button>
+
+              <button id="changebgBtn" class="btn btn-outline-info btn-sm">Change background</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="sevth_card" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Nature">
+          <div class="card-body">
+            <h5 class="card-title">Nature Explorer</h5>
+            <p class="card-text">Discover the beauty of natural landscapes around the world.</p>
+            <div class="d-flex gap-2">
+              <button id="shakeBtn" class="btn btn-primary btn-sm">shake</button>
+              <button id="fontBtn" class="btn btn-outline-primary btn-sm">Change Font title</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="card8" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Urban">
+          <div class="card-body">
+            <h5 id="card8text" class="card-title">Urban Adventure</h5>
+            <p class="card-text">Explore vibrant cityscapes and urban architecture.</p>
+            <div class="d-flex gap-2">
+              <button id="flipBtn" class="btn btn-success btn-sm">Flip card</button>
+              <button id="shadowBtn" class="btn btn-outline-success btn-sm">shadow text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="floating" class="card h-100">
+          <img id="rotated8" src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Tech">
+          <div class="card-body">
+            <h5 class="card-title">Tech Innovations</h5>
+            <p class="card-text">Stay updated with the latest technological advancements.</p>
+            <div class="d-flex gap-2">
+              <button id="floatBtn" class="btn btn-info btn-sm">Float now</button>
+              <button id="rotateimgBtn" class="btn btn-outline-info btn-sm">rotate image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="card10" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Nature">
+          <div class="card-body">
+            <h5 class="card-title">Nature Explorer</h5>
+            <p class="card-text">Discover the beauty of natural landscapes around the world.</p>
+            <div class="d-flex gap-2">
+              <button id="shadowBtn10" class="btn btn-primary btn-sm">Inner shadow</button>
+              <button id="colorBtn10" class="btn btn-outline-primary btn-sm">Change button Color</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="card11" class="card h-100">
+          <img id="cardImg11" src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Urban">
+          <div class="card-body">
+            <h5 class="card-title">Urban Adventure</h5>
+            <p class="card-text">Explore vibrant cityscapes and urban architecture.</p>
+            <div class="d-flex gap-2">
+              <button id="squeezeBtn" class="btn btn-success btn-sm">squeeze Effect</button>
+              <button id="blurBtn" class="btn btn-outline-success btn-sm">blur Effect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div id="card12" class="card h-100">
+          <img src="images/16843254529621a10f1cafe46cea135b902a3aefe9014.webp" class="card-img-top" alt="Tech">
+          <div class="card-body">
+            <h5 class="card-title">Tech Innovations</h5>
+            <p class="card-text">Stay updated with the latest technological advancements.</p>
+            <p id="stars" class="hiddenstars">⭐ ✨ 🌟 ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❂ ❈ ❉ ✧</p>
+            <div class="d-flex gap-2">
+              <button id="gradientBtn" class="btn btn-info btn-sm">gradient effect</button>
+              <button id="starsBtn" class="btn btn-outline-info btn-sm">Stars effect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

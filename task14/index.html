@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern DOM Playground</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100">
+
+    <header class="header-gradient text-white text-center py-5 mb-5">
+        <h1 class="text-4xl font-bold">Modern DOM Playground</h1>
+        <p class="text-lg">Interactive exploration of DOM manipulation techniques</p>
+    </header>
+
+    <div class="container mx-auto px-4">
+        <!-- First Row of Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+            <!-- Element Creation Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2 flex items-center">
+                    Element Creation
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded-full">New</span>
+                </h2>
+                <p class="text-gray-600 mb-4">Create and add elements to the DOM with different methods.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="create-div" class="btn btn-primary">Create Div</button>
+                    <button id="create-text" class="btn btn-secondary">Create with Text</button>
+                    <button id="create-html" class="btn btn-info text-white">Create with HTML</button>
+                    <button id="clear-all-creation" class="btn btn-danger">Clear All</button>
+                </div>
+                <div id="creation-container" class="output-container"></div>
+            </div>
+
+            <!-- Element Removal Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2">Element Removal</h2>
+                <p class="text-gray-600 mb-4">Different ways to remove elements from the DOM.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="add-elements" class="btn btn-success">Add Elements</button>
+                    <button id="remove-last" class="btn btn-danger">Remove Last</button>
+                    <button id="remove-first" class="btn btn-danger">Remove First</button>
+                    <button id="remove-all" class="btn btn-danger">Remove All</button>
+                </div>
+                <div id="removal-container" class="output-container"></div>
+            </div>
+
+            <!-- Element Styling Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2">Element Styling</h2>
+                <p class="text-gray-600 mb-4">Manipulate element styles dynamically.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="inline-style" class="btn btn-primary">Inline Style</button>
+                    <button id="toggle-class" class="btn btn-secondary">Toggle Class</button>
+                    <button id="get-computed" class="btn btn-success">Get Computed</button>
+                    <button id="reset-styles" class="btn btn-danger">Reset Styles</button>
+                </div>
+                <div id="style-target" class="styled-element">
+                    This element will be styled in different ways
+                </div>
+                <div id="computed-styles-output" class="info-footer"></div>
+            </div>
+        </div>
+
+        <!-- Second Row of Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            <!-- Attributes Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2">Attributes</h2>
+                <p class="text-gray-600 mb-4">Work with element attributes and data-* attributes.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="set-attributes" class="btn btn-primary">Set Attributes</button>
+                    <button id="get-attributes" class="btn btn-secondary">Get Attributes</button>
+                    <button id="data-attributes" class="btn btn-info text-white">Data Attributes</button>
+                    <button id="remove-attributes" class="btn btn-danger">Remove Attributes</button>
+                </div>
+                <div class="attribute-demo-element">
+                    <p class="font-semibold mb-2">Attribute Demo Element</p>
+                    <input type="text" id="attribute-input" class="form-control" placeholder="New placeholder text">
+                </div>
+                <div id="attribute-output" class="info-footer"></div>
+            </div>
+
+            <!-- Content Manipulation Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2">Content Manipulation</h2>
+                <p class="text-gray-600 mb-4">Different methods for changing element content.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="inner-html" class="btn btn-primary">innerHTML</button>
+                    <button id="text-content" class="btn btn-secondary">textContent</button>
+                    <button id="insert-adjacent" class="btn btn-info text-white">insertAdjacentHTML</button>
+                    <button id="reset-content" class="btn btn-danger">Reset Content</button>
+                </div>
+                <div id="content-manip-container" class="output-container">
+                    <p>Original content</p>
+                </div>
+                <div id="content-manip-output" class="info-footer"></div>
+            </div>
+
+            <!-- Event Handling Card -->
+            <div class="card p-4">
+                <h2 class="text-xl font-semibold mb-2">Event Handling</h2>
+                <p class="text-gray-600 mb-4">Add and remove event listeners dynamically.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button id="add-events" class="btn btn-primary">Add Events</button>
+                    <button id="remove-events" class="btn btn-danger">Remove Events</button>
+                </div>
+                <div id="event-target" class="event-interaction-box">
+                    Interact with me
+                </div>
+                <div id="event-output" class="info-footer"></div>
+            </div>
+        </div>
+        <!-- 3th row of cards  -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+          <!-- Element Creation Card -->
+          <div class="card p-4">
+              <h2 class="text-xl font-semibold mb-2 flex items-center">
+                  DOM Traversal
+                  <span class="bg-blue-100 text-blue-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded-full">New</span>
+              </h2>
+              <p class="text-gray-600 mb-4">Create and add elements to the DOM with different methods.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                  <button id="ParentBtn" class="btn btn-primary">Parent</button>
+                  <button id="ChildrenBtn" class="btn btn-secondary">Children</button>
+                  <button id="SibilingsBtn" class="btn btn-info text-white">Sibilings</button>
+                  <button id="QueryBtn" class="btn btn-danger">Query</button>
+              </div>
+              <div id="creation-container" class="output-container parent">
+                Root Element
+                <div class="p-2 border mt-2 child">Child 1
+                  <div class="grandchild p-2 border mt-2 grandchild">grandchild</div>
+                </div>
+                <div class="p-2 border mt-2 child" id="target">Child 2 (Target)</div>
+                <div class="p-2 border mt-2 child">Child 3</div>
+              </div>
+          </div>
+
+          <!-- Animation Card -->
+          <div class="card p-4">
+              <h2 class="text-xl font-semibold mb-2">Animation</h2>
+              <p class="text-gray-600 mb-4">Animate elements using JS</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                  <button id="btn-move" class="btn btn-success">animation</button>
+                  <button id="btn-color" class="btn btn-danger">Color</button>
+                  <button id="btn-transform" class="btn btn-danger">Transform</button>
+                  <button id="btn-stop" class="btn btn-danger">Stop</button>
+              </div>
+              <div id="anim-area" class="output-container">
+                <div id="anim-box" style="width:36px;height:36px;background:#ff2d55;border-radius:6px;"></div>
+              </div>
+          </div>
+
+          <!-- Element Styling Card -->
+          <div class="card p-4">
+              <h2 class="text-xl font-semibold mb-2">Class Manipulation</h2>
+              <p class="text-gray-600 mb-4">Add / Remove / Toggle / Check / Replace</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                  <button id="btn-add-class" class="btn btn-primary">Add Class</button>
+                  <button id = "btn-remove-class" class="btn btn-secondary">Remove Class</button>
+                  <button id = "btn-toggle-class-2" class="btn btn-success">Toggle Class</button>
+                  <button id="btn-check-class" class="btn btn-danger">Check Class</button>
+                  <button class="btn btn-warning " id="btn-replace-class">Replace Class</button>
+              </div>
+              <div id="Classstyle-target" class="styled-element ">
+                  This element will be styled in different ways
+              </div>
+              <div class="info-footer">
+                <p id="computed-styles-output"></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- 4th Row of Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+        <!-- Element Creation Card -->
+        <div class="card p-4">
+            <h2 class="text-xl font-semibold mb-2 flex items-center">
+              Form Manipulation
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded-full">New</span>
+            </h2>
+            <p class="text-gray-600 mb-4">Create and add elements to the DOM with different methods.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <button class="btn btn-primary btn-small" id="btn-fill-form">Fill Form</button>
+              <button class="btn btn-info btn-small" id="btn-get-values">Get Values</button>
+              <button class="btn btn-danger btn-small" id="btn-reset-form">Reset Form</button>
+            </div>
+            <input id="f-name" class="form-control mb-2" placeholder="Your name">
+            <select id="f-color" class="form-select mb-2"><option value="red">Red</option><option value="green">Green</option><option value="blue">Blue</option></select>
+            <div id="textresponse" class="info-footer"></div>
+        </div>
+
+        <!-- Element Removal Card -->
+        <div class="card p-4">
+            <h2 class="text-xl font-semibold mb-2">Local Storage </h2>
+            <p class="text-gray-600 mb-4">Different ways to remove elements from the DOM.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <button id="btn-set-item" class="btn btn-info">Set Item</button>
+                <button id="btn-get-item" class="btn btn-primary">Get Item</button>
+                <button id="btn-store-object" class="btn btn-warning">Store Object</button>
+                <button class="btn btn-danger btn-small" id="btn-clear-storage">Clear Storage</button>
+            </div>
+            <input id="ls-input" class="form-control mb-2" placeholder="Enter data to store">
+            <div id="ls-output" class="info-footer"></div>
+        </div>
+
+        <!-- Element Styling Card -->
+        <div class="card p-4">
+            <h2 class="text-xl font-semibold mb-2">Element Styling</h2>
+            <p class="text-gray-600 mb-4">Manipulate element styles dynamically.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <button class="btn btn-primary btn-small" id="btn-clone">Clone Element</button>
+              <button class="btn btn-info btn-small" id="btn-debounce">Debounce</button>
+              <button class="btn btn-success btn-small" id="btn-template">Templates</button>
+              <button class="btn btn-warning btn-small" id="btn-observer">Observer</button>
+            </div>
+            <div>
+              <div class="demo-area" id="advanced-area">Original Element (Click to change color)</div>
+            </div>
+            <div id="AdvancedDomOut" class="info-footer"></div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

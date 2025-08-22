@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BootstrapPro Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">BootstrapPro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active  underlined" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link underlined" href="#">Carousel</a></li>
+        <li class="nav-item"><a class="nav-link underlined" href="#">Modal</a></li>
+        <li class="nav-item"><a class="nav-link underlined" href="#">Accordion</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Components</a></li>
+            <li><a class="dropdown-item" href="#">Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#demoModal">Launch Modal</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="fw-bold">Bootstrap 5 Components Demo</h1>
+        <p class="lead">Explore modern implementations of Bootstrap JavaScript components with animations and gradients.</p>
+        <button class="btn btn-light me-2">Show Collapse</button>
+        <button class="btn btn-outline-light">Show Toast</button>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="assests/Web-Application.webp" alt="Illustration" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel -->
+<section class="py-5 text-center">
+  <h2>Bootstrap Carousel</h2>
+  <div id="demoCarousel" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assests/design.jpg" class="d-block w-100" alt="Slide">
+        <div class="carousel-caption"><h5>First Slide</h5></div>
+      </div>
+      <div class="carousel-item">
+        <img src="assests/logo.webp" class="d-block w-100" alt="Slide">
+        <div class="carousel-caption"><h5>Second Slide</h5></div>
+      </div>
+      <div class="carousel-item">
+        <img src="assests/security.jpg" class="d-block w-100" alt="Slide">
+        <div class="carousel-caption"><h5>Third Slide</h5></div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Modal -->
+<section class="py-5 text-center">
+  <h2>Bootstrap Modal</h2>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">Launch Demo Modal</button>
+</section>
+
+<!-- Accordion -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center">Bootstrap Accordion</h2>
+    <div class="accordion mt-4" id="demoAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Accordion Item #1</button></h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#demoAccordion">
+          <div class="accordion-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint vitae doloremque maxime 
+            quasi, illo in impedit nemo, natus mollitia corporis, adipisci atque. Ipsum blanditiis 
+            nam dolorum explicabo temporibus asperiores aut incidunt culpa esse maiores impedit velit
+            atque recusandae nisi architecto, nostrum quibusdam sapiente aspernatur perferendis
+            exercitationem consequuntur harum placeat? Earum!
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Accordion Item #2</button></h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+          <div class="accordion-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint vitae doloremque maxime 
+            quasi, illo in impedit nemo, natus mollitia corporis, adipisci atque. Ipsum blanditiis 
+            nam dolorum explicabo temporibus asperiores aut incidunt culpa esse maiores impedit velit
+            atque recusandae nisi architecto, nostrum quibusdam sapiente aspernatur perferendis
+            exercitationem consequuntur harum placeat? Earum!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Toast -->
+<section class="py-5 text-center">
+  <h2>Bootstrap Toast</h2>
+  <button class="btn btn-primary" id="liveToastBtn">Show Toast Notification</button>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert">
+      <div class="toast-header">
+        <strong class="me-auto">BootstrapPro</strong>
+        <small>Just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body">Hello, this is a toast message!</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <p class="mb-1">Bootstrap Components Demo</p>
+    <a href="#">Components</a> | <a href="#">Resources</a>
+  </div>
+</footer>
+
+<!-- Modal Code -->
+<div class="modal fade" id="demoModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Demo Modal</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">This is a demo modal content.</div>
+      <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const toastTrigger = document.getElementById('liveToastBtn')
+  const toastLiveExample = document.getElementById('liveToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+      const toast = new bootstrap.Toast(toastLiveExample)
+      toast.show()
+    })
+  }
+</script>
+</body>
+</html>

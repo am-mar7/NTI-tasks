@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+body{
+        background-color: silver;
+}
+header{
+    text-align: center;
+    background: linear-gradient(45deg , purple , rgb(228, 75, 101));
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+.first{
+    padding: 20px 0px;
+}
+.first p{
+    font-size: 12px;
+}
+nav{
+    background-color: pink;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 5px;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+li a{
+    color: aliceblue;
+    padding: 5px;
+}
+nav ul li:hover{
+    background-color: aliceblue;
+    
+}
+nav ul li:hover a{
+    color: blueviolet;   
+}
+
+/* main  */
+main{
+    padding: 10px;
+}
+main div{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.dotted-title{
+    color: blueviolet;
+    font-size: 28px;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px dashed black;
+}
+.container{
+    display: inline-block;
+    /* background-color: aqua; */
+    box-shadow: -1px 1px 4px 4px rgb(171, 171, 171);
+    margin-right: 20px;
+}
+.crewtable table{
+    width: 100%;
+    background-color: pink;   
+    border: none; 
+    border-radius: 10px;
+}
+tr , th{
+    border: none;
+    padding: 10px;
+    text-align: start;
+}
+.firstrow{
+    background-color: purple;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.row{
+    color: rgb(61, 61, 61)
+} 
+
+.card{
+    display: inline-block;
+    background-color: pink;
+    margin: 10px;
+    border-left: 5px solid purple;
+    max-width: 300px;
+}
+.card h2{
+    color: purple;
+    font-size: 21px;
+}
+footer{
+    background-color: blueviolet;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px;
+}

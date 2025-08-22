@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header div {
+    background: linear-gradient(to right , rgb(1, 1, 113) , rgb(109, 109, 252));
+    padding: 4vw;
+    
+}
+header div h1{
+    text-align: center;
+    margin-bottom: 2vw;
+    font-size: calc(32px + 2vw);
+    color: white;
+}
+header div p{
+    color: white;
+    text-align: center;
+}
+
+.navbar{
+    background-color: rgb(71, 71, 71);
+    padding: 0.5vw;
+}
+.navbar a{
+    color: white;
+    padding: 0.5vw;
+    margin: 0vw 1.5vw;
+    font-weight: 600;
+}
+#home{
+    margin-left: 37.5%;
+}
+.navbar a:hover{
+    background-color: white;
+    color: rgb(71, 71, 71);
+    border-radius: 0.4vw;
+}
+main{
+    background:linear-gradient(to right ,rgb(249, 249, 81) , rgb(254, 233, 0));
+    padding:1.25vw 2.5vw 4vw 2.5vw;
+    /* display: flex;
+    justify-content: space-between; */
+}
+.first{
+    vertical-align: top;
+    display: inline-block;
+    background-color: white;
+    padding:1.25vw 2.5vw;
+    border-radius: 0.5vw;
+    width: 60%;
+    margin-right: 10px;
+    
+}
+.first h1{
+    font-size: calc(16px+1.2vw);
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 2vw;
+}
+.first p{
+    margin-bottom: 3vw;
+    font-size: calc(12px + 0.5vw);
+    color:rgb(71, 71, 71)
+}
+
+
+.second{
+    vertical-align: top;
+    display: inline-block;
+    background-color:rgb(71, 71, 71) ;
+    border-radius: 0.5vw;
+    padding:1.25vw 2.5vw;
+    width: 25%;
+    writing-mode: vertical-rl;
+    text-align: center;
+    height: 290px;
+}
+.second h1{
+    color: white;
+    font-size: calc(12px + 0.75vw);
+}
+footer{
+    background-color: rgb(71, 71, 71)
+    
+}
+footer h1{
+    text-align: center;
+    color: wheat;
+    padding: 1vw;
+}
